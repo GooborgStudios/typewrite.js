@@ -1,7 +1,7 @@
 //
 // Typewrite.js
 // Originally written by Simon Shahriveri: https://codepen.io/hi-im-si/pen/DHoup
-// Modified by Gooborg Studios © 2018.
+// Modified by Gooborg Studios © 2018-2019.
 // https://github.com/GooborgStudios/typewrite.js
 // 
 
@@ -49,7 +49,7 @@ TxtType.prototype.tick = function() {
 window.onload = function() {
 	var elements = document.getElementsByClassName('typewrite');
 	for (var i=0; i < elements.length; i++) {
-		var strings = elements[i].getAttribute('data-typewrite-text');
+		var strings = elements[i].getAttribute('data-typewrite-text') || elements[i].textContent;
 		var period = elements[i].getAttribute('data-typewrite-period');
 		var typingSpeed = elements[i].getAttribute('data-typewrite-typing-speed');
 		var typingSpeedVariance = elements[i].getAttribute('data-typewrite-typing-speed-variance');
