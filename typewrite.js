@@ -30,14 +30,18 @@ TxtType.prototype.tick = function() {
 	if (this.isDeleting) delta /= 2;
 
 	if (!this.isDeleting && this.txt === fullTxt) {
+		if (this.period == -1) {
+			this.el.classList.add("typewrite-cursor-off");
+			return;
+		}
 		delta = this.period;
 		this.isDeleting = true;
-		this.el.classList.add("typewrite-blinking-cursor");
+		this.el.classList.add("typewrite-cursor-blinking");
 	} else if (this.isDeleting && this.txt === '') {
 		this.isDeleting = false;
 		this.loopNum++;
 		delta = this.deletingSpeed;
-		this.el.classList.remove("typewrite-blinking-cursor");
+		this.el.classList.remove("typewrite-cursor-blinking");
 	}
 
 	var that = this;
@@ -66,7 +70,11 @@ window.onload = function() {
 			content: '|'; \
 			opacity: 1; \
 		} \
-		.typewrite.typewrite-blinking-cursor:after { \
+		.typewrite.typewrite-cursor-off:after { \
+			content: ''; \
+			opacity: 1; \
+		} \
+		.typewrite.typewrite-cursor-blinking:after { \
 			animation: typewrite-blink .75s step-end infinite; \
 		} \
 		@keyframes typewrite-blink { \
