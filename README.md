@@ -3,7 +3,7 @@ Mimic the appearance of typing on the screen.
 
 Originally written by Simon Shahriveri: https://codepen.io/hi-im-si/pen/DHoup
 
-Modified by Gooborg Studios © 2018.
+Modified by Gooborg Studios © 2018-2019.
 
 ## Usage
 Add the "typewrite" class to a DOM element to add the typewriter animation to.  Then, add at least the `data-typewrite-text` attribute (the rest are optional).
