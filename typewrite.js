@@ -62,24 +62,4 @@ window.onload = function() {
 			new TxtType(elements[i], JSON.parse(strings), period, typingSpeed, typingSpeedVariance, deletingSpeed);
 		}
 	}
-
-	// INJECT CSS
-	var css = document.createElement("style");
-	css.type = "text/css";
-	css.innerHTML = ".typewrite:after { \
-			content: '|'; \
-			opacity: 1; \
-		} \
-		.typewrite.typewrite-cursor-off:after { \
-			content: ''; \
-			opacity: 1; \
-		} \
-		.typewrite.typewrite-cursor-blinking:after { \
-			animation: typewrite-blink .75s step-end infinite; \
-		} \
-		@keyframes typewrite-blink { \
-			from, to { opacity: 0; } \
-			50% { opacity: 1; } \
-		}";
-	document.body.appendChild(css);
 };

@@ -6,6 +6,8 @@ Originally written by Simon Shahriveri: https://codepen.io/hi-im-si/pen/DHoup
 Modified by Gooborg Studios © 2018-2019.
 
 ## Usage
+Include both `typewrite.js` and `typewrite.css` in your HTML.
+
 Add the "typewrite" class to a DOM element to add the typewriter animation to.  Then, add at least the `data-typewrite-text` attribute (the rest are optional).
 
 ## DOM Element Attributes
