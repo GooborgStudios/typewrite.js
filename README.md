@@ -8,6 +8,16 @@ Modified by Gooborg Studios © 2018-2019.
 ## Usage
 Include both `typewrite.js` and `typewrite.css` in your HTML.
 
+Next, call `initTypewrite();` from your code.
+
+```javascript
+$(document).ready(initTypewrite); // Init on load, jQuery
+
+window.onload = initTypewrite; // Init on load, pure JavaScript
+
+initTypewrite(); // Raw call in <script> element at the end of the body
+```
+
 Add the "typewrite" class to a DOM element to add the typewriter animation to.  Then, add at least the `data-typewrite-text` attribute (the rest are optional).
 
 ## DOM Element Attributes

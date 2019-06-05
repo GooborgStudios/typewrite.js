@@ -50,7 +50,7 @@ TxtType.prototype.tick = function() {
 	}, delta);
 };
 
-window.onload = function() {
+function initTypewrite() {
 	var elements = document.getElementsByClassName('typewrite');
 	for (var i=0; i < elements.length; i++) {
 		var strings = elements[i].getAttribute('data-typewrite-text') || elements[i].textContent;
